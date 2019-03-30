@@ -5,6 +5,10 @@ import com.example.ooptodo.domain.NotesRepository;
 
 import java.util.List;
 
+/**
+ * Implementation will be different depending on how you get your data.
+ * Could be fro Shared Preferences, Firebase, Room, etc etc
+ */
 public class NotesRepositoryImpl implements NotesRepository {
 
     @Override

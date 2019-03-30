@@ -17,14 +17,15 @@ import static org.junit.Assert.*;
 import static org.mockito.Mockito.verify;
 
 public class NotesUsecaseTest {
-    @Mock NotesRepository repository;
+    @Mock
+    private NotesRepository repository;
     private NotesUsecase testSubject;
 
     @Before
     public void setup() {
         MockitoAnnotations.initMocks(this);
 
-        this.testSubject = new NotesUsecaseImpl(repository);
+        testSubject = new NotesUsecaseImpl(repository);
     }
 
     @Test
@@ -59,7 +60,6 @@ public class NotesUsecaseTest {
         Note oldNote = new Note(id, title, body, oldDate);
 
         Date newDate = new Date(2000, 1, 2, 1, 1, 1);
-        Note newNote = new Note(id, title, body, newDate);
 
         // When
         boolean result = testSubject.updateNote(oldNote, newDate);
